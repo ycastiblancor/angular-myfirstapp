@@ -1,0 +1,99 @@
+<!-- PRIMERA PARTE
+    usar directiva: condicionales for, if dentro de angular *ngFor, almacena en la varibale user lo que recorre del arreglo users
+-->
+<!--<ul>-->
+    <!--<li *ngFor="let user of users">-->
+        <!--Variable user de app.component.ts-->
+         <!--{{user}}-->
+         <!--Variable de otro compenente:
+            primero: ver como se llama la variable selector  en el modulo_a_traer.component.ts
+
+        -->
+        <!--entrada [] -->
+         <!--
+             <app-user *ngFor="let user of users" [nameUser]="user"></app-user>
+        -->
+
+   <!--- </li>-->
+
+    <!--
+    <li *ngIf="activated">
+            activated
+    </li>
+    -->
+<!--   
+</ul>
+-->
+<!-- SEGUNDA PARTE
+<div>
+    <p>name: {{name}}</p>
+    <p>Street: {{address.street}}</p>
+    <p>city: {{address.city}}</p>
+    <p>Hobbies:</p>
+    <ul>
+        <li *ngFor="let hobby of hobbies">
+             {{hobby}}
+        </li>
+    </ul>
+</div>
+-->
+<!-- EVENTO FORMULARIO FORM -->
+<form (submit)="addUser(newUser)">
+    <!--obtener valor del input: por referencia: obtengo el valor del input entero-->
+    <input type="text" #newUser>
+    <button>Send user </button>
+</form>
+
+
+
+<!-- EVENTO CLICK -->
+
+<!-- <ul> -->
+    <!-- <li *ngFor="let user of users">
+        {{user}}
+        <button (click)="sayHello(user)">
+                Say Hello
+        </button>
+        <button (click)="deleteUser(user)">
+                X
+        </button>
+    </li> -->
+
+    <!--CUARTA PARTE
+    Vinculando datos, doble enlace de datos
+    propue
+    que modelo de dato  quiero usar en el input: [(ngModel)]="nombre-de-lo-que-deseo-aqui"
+    ADVERTENCIA: hay que activar la funcionalidad de Angular en primera instancia: ir a app.module.ts
+    -->
+    <!--
+    <div>
+        <form>
+            <input type="text" name="name" [(ngModel)]="name">
+            <input type="text" name="age" [(ngModel)]="age">
+        </form>
+        
+        name:{{ name }} <br>
+        age: {{ age }}
+    </div>
+    -->
+<!-- </ul> -->
+
+<hr> 
+<!--
+<div *ngFor="let post of posts">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+</div>
+-->
+<ul>
+    <li>
+        <a routerLink="/">Home</a>
+    </li>
+    <li>
+        <a routerLink="/about">About</a>
+    </li>
+    <li>
+        <a routerLink="/">Home</a>
+    </li>
+</ul>
+<router-outlet></router-outlet>
